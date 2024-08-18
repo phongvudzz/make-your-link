@@ -1,3 +1,4 @@
+"use client";
 import { PreviewButtonMobile } from "@/components/actions/preview-button-mobile";
 import { HomeEditor } from "@/components/home-editor";
 import React from "react";

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useCallback, useMemo, useState } from "react";
 import {
   Dialog,
@@ -17,7 +18,7 @@ import { encodeData } from "@/lib/utils";
 import { Input } from "../ui/input";
 import { toast } from "sonner";
 
-export const ButtonPublish = () => {
+const ButtonPublish = () => {
   const { myLink, isEmpty } = useData();
   const [copy, setCopy] = useState(false);
 
@@ -91,3 +92,5 @@ export const ButtonPublish = () => {
     </Dialog>
   );
 };
+
+export default ButtonPublish;

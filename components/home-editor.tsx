@@ -2,9 +2,17 @@ import { ExtraLinks } from "./extra-link/extra-links";
 import { SocialLinks } from "./social-links";
 import { PersonalInfo } from "./personal-info";
 import { BackgroundSettings } from "./background/background-settings";
-import { ButtonPublish } from "./actions/button-publish";
-import { ButtonDemo } from "./actions/button-demo";
 import { MobilePreview } from "./mobile/mobile-preview";
+
+import dynamic from "next/dynamic";
+import { ButtonDemo } from "./actions/button-demo";
+
+const ButtonPublish = dynamic(
+  () => import("../components/actions/button-publish"),
+  {
+    ssr: false,
+  }
+);
 
 export const HomeEditor = () => {
   return (

@@ -17,7 +17,7 @@ export const MobileScreen = () => {
         ? BACKGROUND_OPTIONS.find((option) => option.code === background)
             ?.component
         : null,
-    [background]
+    [background, myLink]
   );
 
   return (
