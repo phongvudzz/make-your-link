@@ -3,7 +3,11 @@ import { BACKGROUND_OPTIONS } from "@/components/background/background-snippet";
 import { DisplayScreen } from "@/components/mobile/display-screen";
 import Loading from "./loading";
 
-export default function PreviewPage({ searchParams }: any) {
+export default function PreviewPage({
+  searchParams,
+}: {
+  searchParams: { data: string };
+}) {
   if (!searchParams.data) throw new Error("No data found in the URL");
 
   const data = decodeData(searchParams.data);

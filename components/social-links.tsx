@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { ChangeEvent } from "react";
 import {
   Card,
   CardContent,
@@ -11,13 +11,15 @@ import {
 import { SocialInput } from "./social-input";
 import { socialLinksProvider } from "@/data/constant";
 import { useData } from "@/lib/context";
+import { DataProps } from "@/types";
 
 export const SocialLinks = () => {
   const { myLink, updateProfileInfo } = useData();
-  const handleInfoChange = (event: any) => {
+
+  const handleInfoChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
 
-    updateProfileInfo(name, value);
+    updateProfileInfo(name as keyof DataProps, value);
   };
 
   return (

@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "uploadthing.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "ie784x5mqk.ufs.sh",
+        pathname: "**",
+      },
     ],
   },
 };

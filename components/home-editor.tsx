@@ -27,7 +27,7 @@ export const HomeEditor = () => {
           <ButtonDemo />
         </div>
       </div>
-      <div className="h-auto w-[35%] hidden lg:!block">
+      <div className="h-auto w-[35%] hidden lg:!block py-8">
         <MobilePreview />
       </div>
     </div>

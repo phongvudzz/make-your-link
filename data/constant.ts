@@ -12,7 +12,7 @@ export const socialLinksProvider: SocialLink[] = [
   { name: "whatsapp", icon: "ph:whatsapp-logo-duotone", id: "whatsapp" },
 ];
 
-export const iconsLists = [
+export const iconsList = [
   { name: "My Portfolio", value: "ph:laptop-duotone" },
   { name: "Chatbot project", value: "ant-design:robot-outlined" },
   { name: "Ai project", value: "fluent:brain-circuit-20-regular" },
@@ -21,45 +21,39 @@ export const iconsLists = [
 ];
 
 export const demoData: DataProps = {
-  name: "Nguyen Phong Vu",
-  image: "https://utfs.io/f/33746831-7d71-4329-b8a0-89d71f32c0d2-6caoya.jpg",
+  name: "Vu Phong Nguyen",
+  image:
+    "https://ie784x5mqk.ufs.sh/f/3231023f-2c62-45de-9dcd-53e599441971-1d.jpg",
   description:
-    "I'm a self-taught Web developer who is always learning and creating cool Project stuffs. I'm a self-taught Web developer who is always learning and creating cool Project stuffs. I'm a self-taught Web developer who is always learning and creating cool Project stuffs. I'm a self-taught Web developer who is always learning and creating cool Project stuffs.",
-  facebook: "https://www.facebook.com/profile.php?id=100089372082015",
-  twitter: "https://x.com/NguynNg48445405",
-  instagram: "https://www.instagram.com/phongvudz/",
-  telegram: "https://web.telegram.org/k/#@phongvu9",
-  github: "https://github.com/phongvulearning",
-  linkedin:
-    "https://www.linkedin.com/in/phong-v%C5%A9-nguy%E1%BB%85n-498aa2253/",
-  email: "phongvulearning@gmail.com",
+    "Expert front-end developer skilled in React.js, TypeScript, Tanstack, and Tailwind CSS, building high-performance web apps and scalable SaaS platforms with intuitive, user-focused interfaces. I excel in UX, performance optimization, and PWAs. ",
+  facebook: "www.facebook.com/phongvudzz/",
+  twitter: "x.com/phongvudzz",
+  instagram: "",
+  telegram: "web.telegram.org/k/#@phongvu9",
+  github: "github.com/phongvulearning",
+  linkedin: "linkedin.com/in/phongvudz",
+  email: "mailto:phongvulearning@gmail.com",
   whatsapp: "",
   youtube: "",
-  background: "#E6E6FA",
+  background: "#808080",
   extraLinks: [
     {
       id: "1",
       icon: "ph:laptop-duotone",
-      label: "My Portfolio Website",
-      link: "https://phongvuportfolio.vercel.app",
+      label: "Urslots - Booking Application",
+      link: "https://dev.urslots.com",
     },
     {
       id: "2",
       icon: "ant-design:robot-outlined",
-      label: "My Taskify App",
-      link: "https://taskify-app-phong-vu.vercel.app",
+      label: "Taskify - Task Management App",
+      link: "https://phong-vu-jira.vercel.app",
     },
     {
       id: "3",
       icon: "fluent:brain-circuit-20-regular",
-      label: "My Fuzzie App",
-      link: "https://fuzzie-app-pi.vercel.app/",
-    },
-    {
-      id: "4",
-      icon: "icon-park-outline:blockchain",
-      label: "My Recursive Component",
-      link: "https://recursive-component-two.vercel.app/",
+      label: "Flowlytixs - AI Workflow Automation",
+      link: "https://flowlytixs.vercel.app",
     },
   ],
 };

@@ -181,3 +181,12 @@ body::-webkit-scrollbar {
   width: 375px;
   border-radius: 45px;
 }
+
+.swipe-screen {
+  position: absolute;
+  background: #1e1e1e;
+  height: 7px;
+  width: 145px;
+  border-radius: 8px;
+  z-index: 10;
+}

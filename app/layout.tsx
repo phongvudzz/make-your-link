@@ -5,6 +5,9 @@ import "@uploadthing/react/styles.css";
 import { cn } from "@/lib/utils";
 import { DataProvider } from "@/lib/context";
 import { Toaster } from "sonner";
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "@/app/api/uploadthing/core";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,8 +32,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <DataProvider>
           <Toaster />
+
           {children}
         </DataProvider>
       </body>

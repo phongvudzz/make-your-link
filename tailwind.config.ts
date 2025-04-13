@@ -1,5 +1,4 @@
 import { withUt } from "uploadthing/tw";
-import type { Config } from "tailwindcss";
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 

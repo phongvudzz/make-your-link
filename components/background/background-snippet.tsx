@@ -106,6 +106,30 @@ const AmberGlow = () => (
   </div>
 );
 
+const WhiteGlow = () => (
+  <div className="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#FFFFFF1a_1px,transparent_1px),linear-gradient(to_bottom,#FFFFFF1a_1px,transparent_1px)] bg-[size:25px_25px]">
+    <div className="absolute left-0 right-0 top-0 m-auto h-[310px] w-[310px] rounded-full bg-white opacity-20 blur-[100px]" />
+  </div>
+);
+
+const BlueGlow = () => (
+  <div className="absolute inset-0 h-full w-full bg-[#005F4F] bg-[linear-gradient(to_right,#FFFFFF1a_1px,transparent_1px),linear-gradient(to_bottom,#FFFFFF1a_1px,transparent_1px)] bg-[size:25px_25px]">
+    <div className="absolute left-0 right-0 top-0 m-auto h-[310px] w-[310px] rounded-full bg-blue-300 opacity-20 blur-[100px]" />
+  </div>
+);
+
+const GrayGlow = () => (
+  <div className="absolute inset-0 h-full w-full bg-[#808080] bg-[linear-gradient(to_right,#FFFFFF1a_1px,transparent_1px),linear-gradient(to_bottom,#FFFFFF1a_1px,transparent_1px)] bg-[size:25px_25px]">
+    <div className="absolute left-0 right-0 top-0 m-auto h-[310px] w-[310px] rounded-full bg-gray-300 opacity-20 blur-[100px]" />
+  </div>
+);
+
+const GradientGlowGrayToWhite = () => (
+  <div className="absolute inset-0 h-full w-full bg-[#808080] bg-[linear-gradient(to_right,#FFFFFF1a_1px,transparent_1px),linear-gradient(to_bottom,#FFFFFF1a_1px,transparent_1px)] bg-[size:25px_25px]">
+    <div className="absolute left-0 right-0 top-0 m-auto h-[310px] w-[310px] rounded-full bg-gray-300 opacity-20 blur-[100px]" />
+  </div>
+);
+
 export const BACKGROUND_OPTIONS = [
   {
     code: "#1E3A5F",
@@ -195,6 +219,21 @@ export const BACKGROUND_OPTIONS = [
     name: "Amber Glow",
     component: <AmberGlow />,
   },
+  {
+    code: "#FFFFFF",
+    name: "White Glow",
+    component: <WhiteGlow />,
+  },
+  {
+    code: "#005F4F",
+    name: "Blue Glow",
+    component: <BlueGlow />,
+  },
+  {
+    code: "#808080",
+    name: "Gray Glow",
+    component: <GrayGlow />,
+  },
 ];
 
 export const textColorDark = [
@@ -203,4 +242,6 @@ export const textColorDark = [
   "#E6E6FA",
   "#98FF98",
   "#FFD7A8",
+  "#FFFFFF",
+  "#FFBF00",
 ];

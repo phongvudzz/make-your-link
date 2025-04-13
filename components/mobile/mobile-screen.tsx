@@ -1,10 +1,10 @@
 "use client";
 
-import { useData } from "@/lib/context";
-import { cn } from "@/lib/utils";
-import { BACKGROUND_OPTIONS } from "../background/background-snippet";
 import { useMemo } from "react";
+import { cn } from "@/lib/utils";
+import { useData } from "@/lib/context";
 import { DisplayScreen } from "./display-screen";
+import { BACKGROUND_OPTIONS } from "../background/background-snippet";
 
 export const MobileScreen = () => {
   const { myLink, isEmpty } = useData();
@@ -23,20 +23,20 @@ export const MobileScreen = () => {
   return (
     <div
       className={cn(
-        "absolute h-[675px] w-[350px] left-2 top-2 rounded-[28px] overflow-hidden",
+        "absolute h-[680px] w-[355px] rounded-[36px] overflow-hidden",
         {
           "bg-white": !myLink.background,
         }
       )}
     >
       {isEmpty ? (
-        <div className="bg-white w-full text-sm text-muted-foreground h-full flex justify-center items-center z-20">
+        <div className="bg-white w-full text-sm text-muted-foreground h-full flex justify-center items-center z-20 rounded-[32px]">
           Nothing to show...
         </div>
       ) : (
         <>
           {!isEmpty && selectedBackgroundComponent}
-          <div className="h-full pt-10 px-2">
+          <div className="h-full pt-10 px-2 ">
             <DisplayScreen myLink={myLink} />
           </div>
         </>

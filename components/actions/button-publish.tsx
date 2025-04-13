@@ -27,6 +27,12 @@ const ButtonPublish = () => {
     [myLink]
   );
 
+  const handleShare = useCallback(() => {
+    navigator.clipboard.writeText(urlLink);
+    toast.success("Copied to clipboard!");
+    window.open(urlLink, "_blank");
+  }, [urlLink]);
+
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(urlLink);
     toast.success("Copied to clipboard!");
@@ -61,7 +67,7 @@ const ButtonPublish = () => {
             <Input value={urlLink} readOnly />
             <DialogFooter>
               <div className="flex gap-3 w-full justify-between items-center">
-                <Button className="w-full" onClick={() => {}}>
+                <Button className="w-full" onClick={handleShare}>
                   <Share2 className="mr-2 h-4 w-4" />
                   Share
                 </Button>

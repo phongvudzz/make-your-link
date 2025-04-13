@@ -23,6 +23,7 @@ export const BackgroundPicker: React.FC<BackgroundCardProps> = () => {
         const isTextDark = textColorDark.includes(code);
         const isSelected = myLink.background === code;
 
+
         return (
           <Button
             key={code}

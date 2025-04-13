@@ -23,6 +23,7 @@ const SocialInput = React.forwardRef<HTMLInputElement, InputProps>(
             className
           )}
           ref={ref}
+          
           {...props}
         />
       </div>

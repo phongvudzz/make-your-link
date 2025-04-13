@@ -21,11 +21,16 @@ type InputChangeEvent = React.ChangeEvent<
 export const PersonalInfo = () => {
   const { myLink, updateProfileInfo } = useData();
 
-  const handleChangeInfo = (e: any) => {
-    const { name, value } = e.target;
+  const handleChangeInfo = (event: InputChangeEvent) => {
+    const { name, value } = event.target;
 
     updateProfileInfo(name as keyof DataProps, value);
   };
+
+  const handleChangeImage = (event: {target: {name: keyof DataProps, value: string}}) => {
+    const { name, value } = event.target;
+    updateProfileInfo(name as keyof DataProps, value);
+  };  
 
   return (
     <Card className="w-full">
@@ -42,7 +47,7 @@ export const PersonalInfo = () => {
             id="name"
             name="name"
             type="text"
-            placeholder="Vu Phong Nguyen Dep Trai"
+            placeholder="phongvudzz"
             value={myLink.name}
             onChange={handleChangeInfo}
           />
@@ -51,7 +56,7 @@ export const PersonalInfo = () => {
           <Label>Image Upload</Label>
           <PhotoUpload
             value={myLink?.image || ""}
-            onChange={handleChangeInfo}
+            onChange={handleChangeImage}
           />
         </div>
         <div className="grid gap-2 ">
@@ -62,6 +67,7 @@ export const PersonalInfo = () => {
             placeholder="I am a software engineer..."
             value={myLink.description}
             onChange={handleChangeInfo}
+            className="max-h-[400px]"
           />
         </div>
       </CardContent>

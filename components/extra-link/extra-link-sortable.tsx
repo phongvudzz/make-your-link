@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useData } from "@/lib/context";
-import { iconsLists } from "@/data/constant";
+import { iconsList } from "@/data/constant";
 import { Icon } from "@iconify/react";
 import { useCallback } from "react";
 import { Button } from "../ui/button";
@@ -84,7 +84,7 @@ export const SortableLink = ({ extraLink }: ExtraLinkProps) => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    {iconsLists.map((data, i) => (
+                    {iconsList.map((data, i) => (
                       <SelectItem
                         defaultChecked={data.value === icon}
                         className="flex p-2"

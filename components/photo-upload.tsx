@@ -14,8 +14,8 @@ interface PhotoUploadProps {
 export const PhotoUpload = ({ value, onChange }: PhotoUploadProps) => {
   if (value) {
     return (
-      <div className="relative h-[100px] w-[100px]">
-        <Image fill src={value} alt="Upload" className="rounded relative" />
+      <div className="relative max-w-[150px] max-h-[150px] aspect-square rounded-lg">
+        <Image fill src={value} alt="Upload" className="rounded-lg relative aspect-3/2 object-cover object-center" />
         <button
           onClick={() => onChange({ target: { name: "image", value: "" } })}
           type="button"
